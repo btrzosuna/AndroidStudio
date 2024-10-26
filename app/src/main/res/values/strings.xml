@@ -7,4 +7,9 @@
     <string name="alumno">Beatriz Osuna Ortega</string>
     <string name="matricula">22050556</string>
     <string name="materia">Programación Movil</string>
+
+    <string name="altura">Captura la altura</string>
+    <string name="peso">Captura el peso </string>
+    <string name="msj">El resultado aparece aqui</string>
+
 </resources>
