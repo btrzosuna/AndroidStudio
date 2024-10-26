@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="miColor">#E03F3F</color>
     <color name="miAzul">#1461B8</color> <!-- Cambia el valor a un color deseado -->
+    <color name="encabezado">#DDB3E7</color>
 </resources>

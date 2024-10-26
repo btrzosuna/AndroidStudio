@@ -4,4 +4,7 @@
     <string name="limpiar">Limpiar</string>
     <string name="pulsar">Pulsar</string>
     <string name="cerrar">Cerrar</string>
+    <string name="alumno">Beatriz Osuna Ortega</string>
+    <string name="matricula">22050556</string>
+    <string name="materia">Programación Movil</string>
 </resources>
