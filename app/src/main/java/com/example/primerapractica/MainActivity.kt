@@ -13,77 +13,55 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.setPadding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var lblSaludo: TextView
-    private lateinit var txtNombre: EditText
-    private lateinit var btnSaludar: Button
-    private lateinit var btnPulsar: Button
-    private lateinit var btnLimpiar: Button
-    private lateinit var btnCerrar: Button
+    private lateinit var txtNombre : EditText
+    private lateinit var txtSaludo : TextView
+    private lateinit var btnPulsar : Button
+    private lateinit var btnLimpiar : Button
+    private lateinit var btnCerrar : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //iniciarComponentes()
-        eventosBotones()
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)){ v, insets ->
+        iniciarComponentes()
+        eventosClic()
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
     }
+    public fun iniciarComponentes(){
+        txtNombre = findViewById(R.id.txtNombre) as EditText
+        txtSaludo = findViewById(R.id.txtSaludo) as TextView
+        btnPulsar = findViewById(R.id.btnPulsar) as Button
+        btnLimpiar = findViewById(R.id.btnLimpiar) as Button
+        btnCerrar = findViewById(R.id.btnCerrar) as Button
+    }
+    public fun eventosClic(){
+        btnPulsar.setOnClickListener(View.OnClickListener {
 
-        fun eventosBotones(){
-            btnSaludar.setOnClickListener(View.OnClickListener{
-                var strNombre : String =""
-                if (txtNombre.text.toString().contentEquals("")){
-                    Toast.makeText(applicationContext, "Falto capturar el nombre", Toast.LENGTH_SHORT).show()
-                }
-                else{
-                    strNombre ="Hola "+ txtNombre.toString() + "como estas?"
-                    lblSaludo.text =strNombre
-                }
-            })
-            btnLimpiar.setOnClickListener(View.OnClickListener{
-                txtNombre.setText("")
-                lblSaludo.setText("")
-            })
-            btnCerrar.setOnClickListener(View.OnClickListener{
-                finish()
-            })
-        }
+            if(txtNombre.text.toString().contentEquals(charSequence = "")){
+                Toast.makeText(this,"Falto capturar tu nombre",
+                    Toast.LENGTH_SHORT).show()
+            }
+            else {
+                var strNombre: String = txtNombre.text.toString()
+                txtSaludo.text = "Hola " +strNombre+", Como estas?"
 
-//        // Inicializar los elementos de la interfaz
-//        editTextNombre = findViewById(R.id.editTextNombre)
-//        btnPulsar = findViewById(R.id.btnPulsar)
-//        btnLimpiar = findViewById(R.id.btnLimpiar)
-//
-//        // Configurar el botón "Pulsar"
-//        btnPulsar.setOnClickListener(View.OnClickListener{
-//            val nombre = editTextNombre.text.toString()
-//            if (nombre.isNotBlank()) {
-//                Toast.makeText(this, "Hola, ¿Cómo estás $nombre!", Toast.LENGTH_SHORT).show()
-//            } else {
-//                Toast.makeText(this, "Por favor, ingresa tu nombre.", Toast.LENGTH_SHORT).show()
-//            }
-//        })
+            }
+        })
 
+        btnLimpiar.setOnClickListener(View.OnClickListener {
+            //Limpiar un TextView
+            txtSaludo.text=""
+            //Limpiar EditText
+            txtNombre.setText("")
+        })
 
-
-//        // Configurar el botón "Limpiar"
-//        btnLimpiar.setOnClickListener {
-//            editTextNombre.setText("") // Limpia el EditText
-//        }
-//
-//        // Configurar el botón "Limpiar"
-//        btnCerrar.setOnClickListener(View.OnClickListener {
-//           finish()
-//        })
-//
-//
-//
-
+        btnCerrar.setOnClickListener(View.OnClickListener {
+            finish()
+        })
+    }
 }

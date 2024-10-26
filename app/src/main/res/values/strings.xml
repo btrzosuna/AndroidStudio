@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">PrimeraPractica</string>
-    <string name="titulo">Mi primera aplicaciòn</string>
-    <string name="tunombre">Cual es tu nombre?</string>
+    <string name="nombre">Captura tu nombre</string>
     <string name="limpiar">Limpiar</string>
     <string name="pulsar">Pulsar</string>
     <string name="cerrar">Cerrar</string>
