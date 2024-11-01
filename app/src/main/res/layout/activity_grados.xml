@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_grados">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Spinner
+            android:id="@+id/spinnerConversion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/txtCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce grados Celsius"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:visibility="visible"/>/>
+
+        <EditText
+            android:id="@+id/txtFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce grados Fahrenheit"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"/>/>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="El resultado aparece aquí"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnConvertir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convertir"/>
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpiar"/>
+
+            <Button
+                android:id="@+id/btnCerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerrar"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

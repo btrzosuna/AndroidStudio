@@ -54,8 +54,9 @@ class imcActivity : AppCompatActivity() {
             }
             else{
                 var peso : Float = txtPeso.text.toString().toFloat()
-                var altura : Float = txtPeso.text.toString().toFloat()
+                var altura : Float = txtAltura.text.toString().toFloat()
                 var imc : Float = peso/(altura*altura)
+
                 txtResultado.text = imc.toString()
 
             }
@@ -71,7 +72,7 @@ class imcActivity : AppCompatActivity() {
         btnCerrar.setOnClickListener(View.OnClickListener {
              val builder = AlertDialog.Builder(this)
             builder.setTitle("IMC")
-            builder.setMessage("Deseas Salir?")
+            builder.setMessage("¿Deseas Salir?")
             builder.setPositiveButton("Aceptar"){
                 dialog, wich ->
                 finish()

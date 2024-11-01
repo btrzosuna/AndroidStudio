@@ -53,5 +53,9 @@ class menuActivity : AppCompatActivity() {
             val intent = Intent(this, imcActivity::class.java)
             startActivity(intent)
         })
+        crvGrados.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, activity_grados::class.java)
+            startActivity(intent)
+        })
     }
 }
