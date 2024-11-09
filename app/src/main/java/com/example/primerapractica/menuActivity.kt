@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Parcelable.Creator
 import android.view.View
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
@@ -56,6 +57,24 @@ class menuActivity : AppCompatActivity() {
         crvGrados.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, activity_grados::class.java)
             startActivity(intent)
+        })
+        crvMoneda.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, monedaActivity::class.java)
+            startActivity(intent)
+        })
+        crvSalir.setOnClickListener(View.OnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("SALIR")
+            builder.setMessage("¿Deseas Salir?")
+            builder.setPositiveButton("Aceptar"){
+                    dialog, wich ->
+                finish()
+            }
+            builder.setNegativeButton("Cancelar"){
+                    dialog, wich ->
+
+            }
+            builder.show()
         })
     }
 }

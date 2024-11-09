@@ -12,4 +12,16 @@
     <string name="peso">Captura el peso </string>
     <string name="msj">El resultado aparece aqui</string>
 
+    <string-array name="array_conversiones">
+        <item>Pesos Mexicanos - Dolares Americanos</item>
+        <item>Pesos Mexicanos - Dolares Canadienses</item>
+        <item>Pesos Mexicanos - Euros</item>
+        <item>Dolares Americanos - Pesos Mexicanos</item>
+        <item>Dolares Canadienses- Pesos Mexicanos - </item>
+        <item>Euros - Pesos Mexicanos</item>
+    </string-array>
+    <string name="dolar">19.75</string>
+    <string name="dolarc">14.75</string>
+    <string name="euro">22.02</string>
+
 </resources>
