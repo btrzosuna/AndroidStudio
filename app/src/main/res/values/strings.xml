@@ -24,4 +24,17 @@
     <string name="dolarc">14.75</string>
     <string name="euro">22.02</string>
 
+    <string name="domicilio">Av. del Mar 1200 </string>
+    <string name="ciudad">Mazatlan Sinaloa</string>
+    <string name="marca">Toyota</string>
+    <string name="cliente"> Nombre del Cliente</string>
+    <string name="folio">Num. Folio</string>
+    <string name="des">Descripcion del Automovil</string>
+    <string name="precio">Valor del Automovil</string>
+    <string name="po">Porcentaje de pago Inicial</string>
+    <string name="plazos">Plazos</string>
+    <string name="pmensual">Pago Mensual</string>
+    <string name="pinicial">Pago Inicial</string>
+    <string name="tfin">Total a Financiar</string>
+
 </resources>

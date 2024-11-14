@@ -54,7 +54,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/alumno"
+                android:src="@mipmap/bety"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="11sp"
                 android:layout_marginTop="11sp">
